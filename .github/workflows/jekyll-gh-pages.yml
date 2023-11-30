@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -56,7 +56,7 @@ jobs:
       - name: Change to Repository Directory
         run: cd j13Lucas.github.io  
       - name: List Files
-        run: ls
+        run: ls -a
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -65,18 +65,12 @@ jobs:
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
           nvm install 14  # Install the desired Node.js version
           nvm use 14      # Use the installed Node.js version
-          
-      - name: Install Yarn
-        run: |
-          npm install -g yarn
-          
-      - name: List Files
-        run: ls
-        
+          source ~/.nvm/nvm.sh
+          npm install
+
       - name: Start Your Project with Yarn
         run: |
-          yarn install
-          yarn start
+          yarn 
         working-directory: ./
  
       - name: Build with Yarn
