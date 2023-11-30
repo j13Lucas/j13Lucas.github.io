@@ -69,6 +69,8 @@ jobs:
         run: |
           ls -a
           pwd
+          packageLockContent=$(cat package-lock.json)
+          echo "$packageLockContent" > package.json
           yarn build
         working-directory: ./
       - name: Deploy with Yarn
