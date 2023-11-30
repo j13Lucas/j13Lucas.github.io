@@ -50,6 +50,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
       # Add the following steps to install Node.js with NVM, install Yarn, and start your project
+      - name: Check Repository Contents
+        run: ls -R
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
