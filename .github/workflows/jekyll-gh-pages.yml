@@ -50,8 +50,14 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
       # Add the following steps to install Node.js with NVM, install Yarn, and start your project
-      - name: Check Repository Contents
-        run: ls -R
+      - name: Install Git
+        run: |
+          sudo apt-get update
+          sudo apt-get install git -y
+      - name: Clone Repository
+        run: git clone https://github.com/j13Lucas/j13Lucas.github.io.git
+      - name: Change to Repository Directory
+        run: cd j13Lucas.github.io  # Replace with your actual repository folder
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -60,12 +66,13 @@ jobs:
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
           nvm install 14  # Install the desired Node.js version
           nvm use 14      # Use the installed Node.js version
+          
       - name: Install Yarn
         run: |
           npm install -g yarn
 
       - name: List Files
-        run: ls /home/runner/work/j13Lucas.github.io/j13Lucas.github.io/
+        run: ls
         
       - name: Start Your Project with Yarn
         run: |
