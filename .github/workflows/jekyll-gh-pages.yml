@@ -63,7 +63,7 @@ jobs:
           npm install -g yarn
 
       - name: List Files
-        run: ls /home/runner/work/j13Lucas.github.io/j13Lucas.github.io | ls /home/runner/work/j13Lucas.github.io/
+        run: ls /home/runner/work/j13Lucas.github.io/j13Lucas.github.io/
         
       - name: Start Your Project with Yarn
         run: |
