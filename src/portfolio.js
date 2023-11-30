@@ -44,7 +44,7 @@ const skills = [
   'Python',
   'OpenCV',
   'PyTorch',
-  'Keras'.
+  'Keras',
   'HTML',
   'CSS',
   'JavaScript',
