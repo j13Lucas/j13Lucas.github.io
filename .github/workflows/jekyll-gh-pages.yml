@@ -58,6 +58,8 @@ jobs:
         run: git clone https://github.com/j13Lucas/j13Lucas.github.io.git
       - name: Change to Repository Directory
         run: cd j13Lucas.github.io  # Replace with your actual repository folder
+      - name: List Files
+        run: ls
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -70,7 +72,14 @@ jobs:
       - name: Install Yarn
         run: |
           npm install -g yarn
-
+          
+      - name: List Files
+        run: ls
+        
+      - name: Start Your Project with Yarn
+        run: |
+          yarn install
+          yarn start
  
       - name: Build with Yarn
         run: |
