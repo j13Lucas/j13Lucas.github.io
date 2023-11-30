@@ -47,16 +47,6 @@ jobs:
     needs: build
     steps:
       # Add the following steps to install Node.js with NVM, install Yarn, and start your project
-      - name: Install Git
-        run: |
-          sudo apt-get update
-          sudo apt-get install git -y
-      - name: Clone Repository
-        run: git clone https://github.com/j13Lucas/j13Lucas.github.io.git
-      - name: Change to Repository Directory
-        run: cd j13Lucas.github.io  
-      - name: List Files
-        run: ls -a
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -70,6 +60,7 @@ jobs:
 
       - name: Start Your Project with Yarn
         run: |
+          cd j13Lucas.github.io/j13Lucas.github.io
           yarn 
         working-directory: ./
  
