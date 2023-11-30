@@ -70,7 +70,7 @@ jobs:
           ls -a
           pwd
           yarn build
-        working-directory: ../
+        working-directory: ./
       - name: Deploy with Yarn
         run: |
           yarn deploy
