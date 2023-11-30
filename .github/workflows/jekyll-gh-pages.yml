@@ -64,13 +64,10 @@ jobs:
       - name: Start Your Project with Yarn
         run: |
           yarn install
-          yarn start
-        working-directory: ./path/to/your/project  # Replace with your project path
+          yarn start  # Replace with your project path
       - name: Build with Yarn
         run: |
           yarn build
-        working-directory: ./path/to/your/project  # Replace with your project path
       - name: Deploy with Yarn
         run: |
           yarn deploy
-        working-directory: ./path/to/your/project  # Replace with your project path
