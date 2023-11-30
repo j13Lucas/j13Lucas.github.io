@@ -77,13 +77,16 @@ jobs:
         run: |
           yarn install
           yarn start
+        working-directory: ./
  
       - name: Build with Yarn
         run: |
           yarn build
+        working-directory: ./
       - name: Deploy with Yarn
         run: |
           yarn deploy
+        working-directory: ./
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
