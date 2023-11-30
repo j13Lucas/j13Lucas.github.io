@@ -60,13 +60,17 @@ jobs:
 
       - name: Start Your Project with Yarn
         run: |
+          ls -a
+          pwd
           yarn 
         working-directory: ./
  
       - name: Build with Yarn
         run: |
+          ls -a
+          pwd
           yarn build
-        working-directory: ./
+        working-directory: ../
       - name: Deploy with Yarn
         run: |
           yarn deploy
