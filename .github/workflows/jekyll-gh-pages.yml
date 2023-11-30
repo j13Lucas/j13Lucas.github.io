@@ -46,9 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
       # Add the following steps to install Node.js with NVM, install Yarn, and start your project
       - name: Install Git
         run: |
@@ -57,7 +54,7 @@ jobs:
       - name: Clone Repository
         run: git clone https://github.com/j13Lucas/j13Lucas.github.io.git
       - name: Change to Repository Directory
-        run: cd j13Lucas.github.io  # Replace with your actual repository folder
+        run: cd j13Lucas.github.io  
       - name: List Files
         run: ls
       - name: Install Node.js with NVM
@@ -87,3 +84,6 @@ jobs:
       - name: Deploy with Yarn
         run: |
           yarn deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
