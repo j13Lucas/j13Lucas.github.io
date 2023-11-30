@@ -61,16 +61,21 @@ jobs:
       - name: Install Yarn
         run: |
           npm install -g yarn
+
+      - name: List Files
+        run: ls
+
+      # Change the working directory to the path where your package.json file is located
+      - name: Change Directory
+        run: cd /home/runner/work/j13Lucas.github.io/
+        
       - name: Start Your Project with Yarn
         run: |
           yarn install
           yarn start
-        working-directory: ../
       - name: Build with Yarn
         run: |
           yarn build
-        working-directory: ../
       - name: Deploy with Yarn
         run: |
           yarn deploy
-        working-directory: ../
