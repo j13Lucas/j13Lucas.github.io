@@ -71,13 +71,7 @@ jobs:
         run: |
           npm install -g yarn
 
-      - name: List Files
-        run: ls
-        
-      - name: Start Your Project with Yarn
-        run: |
-          yarn install
-          yarn start
+ 
       - name: Build with Yarn
         run: |
           yarn build
