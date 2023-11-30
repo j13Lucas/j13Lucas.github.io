@@ -60,7 +60,6 @@ jobs:
 
       - name: Start Your Project with Yarn
         run: |
-          cd ./j13Lucas.github.io
           yarn 
         working-directory: ./
  
