@@ -80,6 +80,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-           branch: gh-pages
+           trigger: .deploy gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
