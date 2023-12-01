@@ -47,19 +47,17 @@ jobs:
           nvm use 14      # Use the installed Node.js version
           source ~/.nvm/nvm.sh
           npm install
+          npm audit fix --force
 
       - name: Start Your Project with Yarn
         run: |
-          export NODE_OPTIONS=--openssl-legacy-provider
-          set NODE_OPTIONS=--openssl-legacy-provider
           yarn 
-          yarn start
         working-directory: ./
  
       - name: Build with Yarn
         run: |
-          ls ./
-          cd ./
+          export NODE_OPTIONS=--openssl-legacy-provider
+          set NODE_OPTIONS=--openssl-legacy-provider
           yarn build
         working-directory: ./
 
