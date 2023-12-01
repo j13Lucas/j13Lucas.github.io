@@ -60,6 +60,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
+          git config --global user.email "jerry13lucas@gmail.com"
           yarn deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
