@@ -59,9 +59,9 @@ jobs:
         working-directory: ./  
 
       - name: Deploy to GitHub Pages
+        id: deployment
         run: |
-          set :repository, "https://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@github.com/j13Lucas/j13Lucas.github.io.git
-          yarn run deploy
+          gh-pages -d build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
