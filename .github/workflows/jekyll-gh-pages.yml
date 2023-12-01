@@ -55,8 +55,6 @@ jobs:
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
           nvm install 14  # Install the desired Node.js version
           nvm use 14      # Use the installed Node.js version
-          source ~/.nvm/nvm.sh
-          npm install
 
       - name: Start Your Project with Yarn
         run: |
@@ -71,11 +69,11 @@ jobs:
         run: |
           ls -a
           pwd
-          yarn run build
+          react-scripts build --openssl-legacy-provider
         working-directory: ./
       - name: Deploy with Yarn
         run: |
-          yarn deploy
+          gh-pages -d build
         working-directory: ./
       - name: Deploy to GitHub Pages
         id: deployment
