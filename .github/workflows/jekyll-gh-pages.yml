@@ -71,7 +71,7 @@ jobs:
         run: |
           ls -a
           pwd
-          ./bin/build.js
+          yarn build:prod
         working-directory: ./
       - name: Deploy with Yarn
         run: |
