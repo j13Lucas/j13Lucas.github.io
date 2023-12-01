@@ -60,8 +60,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config --global user.name "Jerry Lucas"
-          git config --global user.email "jerry13lucas@gmail.com"
+          set :repository, "https://"+${{ secrets.GITHUB_TOKEN }}+"@github.com/j13Lucas/j13Lucas.github.io.git
           yarn run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
