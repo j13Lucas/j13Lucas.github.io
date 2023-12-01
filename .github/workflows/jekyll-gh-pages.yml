@@ -58,6 +58,12 @@ jobs:
           yarn run build
         working-directory: ./  
 
+      - name: Deploy to GitHub Pages
+        run: |
+          yarn deploy
+        env:
+          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+
   # Deployment job
   deploy:
     environment:
