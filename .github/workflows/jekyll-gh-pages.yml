@@ -60,7 +60,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git remote remove origin
           git remote set-url origin git@github.com:j13Lucas/j13Lucas.github.io.git
           yarn deploy
         env:
