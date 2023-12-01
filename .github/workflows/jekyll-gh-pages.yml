@@ -53,6 +53,7 @@ jobs:
           export NODE_OPTIONS=--openssl-legacy-provider
           set NODE_OPTIONS=--openssl-legacy-provider
           yarn 
+          yarn start
         working-directory: ./
  
       - name: Build with Yarn
