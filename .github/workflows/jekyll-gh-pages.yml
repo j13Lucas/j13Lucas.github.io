@@ -37,16 +37,6 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      # Add the following steps to install Node.js with NVM, install Yarn, and start your project
       - name: Install Node.js with NVM
         run: |
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -67,9 +57,19 @@ jobs:
           cd ./
           yarn build
         working-directory: ./
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # Add the following steps to install Node.js with NVM, install Yarn, and start your project
       - name: Deploy with Yarn
         run: |
-          gh-pages -d build
+          yarn deploy
         working-directory: ./
       - name: Deploy to GitHub Pages
         id: deployment
