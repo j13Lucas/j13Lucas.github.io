@@ -52,6 +52,9 @@ jobs:
         working-directory: ./
       - name: Build with Yarn
         run: |
+          git remote set-url origin https://j13Lucas:${{ secrets.DEPLOY_TOKEN }}@github.com/j13Lucas/j13Lucas.github.io/
+          git config --global user.name 'Jerry Lucas'
+          git config --global user.email 'jerry13lucas@gmail.com'
           export NODE_OPTIONS=--openssl-legacy-provider
           set NODE_OPTIONS=--openssl-legacy-provider
           npx browserslist@latest --update-db
