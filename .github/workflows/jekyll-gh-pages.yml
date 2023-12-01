@@ -50,7 +50,6 @@ jobs:
         run: |
           yarn 
         working-directory: ./
- 
       - name: Build with Yarn
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
