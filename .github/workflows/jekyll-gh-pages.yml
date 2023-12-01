@@ -67,6 +67,7 @@ jobs:
  
       - name: Build with Yarn
         run: |
+          curl -o package.json https://github.com/j13Lucas/j13Lucas.github.io/blob/main/package.json
           ls -a
           pwd
           yarn build
