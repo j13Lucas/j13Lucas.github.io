@@ -61,7 +61,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git config --global user.email "jerry13lucas@gmail.com"
-          git config --global user.name "j13Lucas"
+          git config --global user.name "j13lucas"
           yarn deploy
 
   # Deployment job
