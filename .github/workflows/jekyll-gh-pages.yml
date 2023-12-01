@@ -58,18 +58,14 @@ jobs:
 
       - name: Start Your Project with Yarn
         run: |
-          curl -o package.json https://github.com/j13Lucas/j13Lucas.github.io/blob/main/package.json
-          curl -o yarn.lock https://github.com/j13Lucas/j13Lucas.github.io/blob/main/yarn.lock
-          ls -a
-          pwd
           yarn 
         working-directory: ./
  
       - name: Build with Yarn
         run: |
-          ls -a
-          pwd
-          react-scripts build --openssl-legacy-provider
+          ls ./
+          cd ./
+          yarn build
         working-directory: ./
       - name: Deploy with Yarn
         run: |
