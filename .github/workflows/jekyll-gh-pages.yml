@@ -58,11 +58,6 @@ jobs:
           npx browserslist@latest --update-db
           yarn run build
         working-directory: ./  
-        
-      - name: Deploy with Yarn
-        run: |
-          yarn deploy
-        working-directory: ./
 
   # Deployment job
   deploy:
