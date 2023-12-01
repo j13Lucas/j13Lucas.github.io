@@ -60,11 +60,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git remote remove origin
-          git remote add origin https://github.com/j13Lucas/j13Lucas.github.io.git
-          git config user.email "jerry13lucas@gmail.com"
-          git config user.name "Jerry Lucas" 
           yarn deploy
+        env:
+          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
   # Deployment job
   deploy:
