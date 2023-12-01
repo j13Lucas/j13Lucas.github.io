@@ -45,9 +45,13 @@ jobs:
           [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
           nvm install 14  # Install the desired Node.js version
           nvm use 14      # Use the installed Node.js version
+          source ~/.nvm/nvm.sh
+          npm install
 
       - name: Start Your Project with Yarn
         run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+          set NODE_OPTIONS=--openssl-legacy-provider
           yarn 
         working-directory: ./
  
