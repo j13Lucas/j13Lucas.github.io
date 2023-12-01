@@ -9,7 +9,7 @@ const about = {
   name: 'Jerry Lucas',
   role: 'Computer Vision Engineer',
   description:
-  "Hello! I'm Jerry 👋 , a passionate Computer Vision enthusiast. With a solid foundation in computer science and a keen interest in the realms of machine learning and AI, I am currently deepening my knowledge and skills in the specialized field of Computer Vision. Although I'm early in my professional journey, I've always been intrigued by the capability of machines to 'see' and 'understand' their surroundings. Recognizing the transformative potential of this technology across various industries, from healthcare to autonomous vehicles, I am dedicated to utilize it’s power to create solutions that can make a real difference in people's lives",
+  'Hello! I am Jerry, a passionate Computer Vision enthusiast. With a solid foundation in computer science and a keen interest in the realms of machine learning and AI, I am currently deepening my knowledge and skills in the specialized field of Computer Vision.',
   resume: 'https://example.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/j13lucas/',
@@ -21,7 +21,7 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'Sunglasses Filter Using OpenCV',
+    name: 'Sunglasses-Filter',
     description:
       'Apply sunglasses filter on video/webcam as input',
     stack: ['Python', 'OpenCV'],
@@ -29,7 +29,7 @@ const projects = [
     livePreview: 'https://example.com',
   },
   {
-    name: 'Object Detection And Tracking',
+    name: 'Object Detection',
     description:
       'Detect Object and track it through video/webcam input',
     stack: ['Python', 'OpenCV'],
