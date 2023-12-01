@@ -57,6 +57,11 @@ jobs:
           set NODE_OPTIONS=--openssl-legacy-provider
           npx browserslist@latest --update-db
           yarn run build
+        working-directory: ./  
+        
+      - name: Deploy with Yarn
+        run: |
+          yarn deploy
         working-directory: ./
 
   # Deployment job
@@ -67,11 +72,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # Add the following steps to install Node.js with NVM, install Yarn, and start your project
-      - name: Deploy with Yarn
-        run: |
-          yarn deploy
-        working-directory: ./
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
