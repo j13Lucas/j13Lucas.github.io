@@ -1,7 +1,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://j13Lucas.github.io/',
-  title: 'JS.',
+  title: 'JL.',
 }
 
 const about = {
