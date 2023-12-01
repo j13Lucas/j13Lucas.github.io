@@ -71,7 +71,9 @@ jobs:
         run: |
           ls -a
           pwd
-          yarn build:prod
+          
+          yarn start
+          yarn run build
         working-directory: ./
       - name: Deploy with Yarn
         run: |
