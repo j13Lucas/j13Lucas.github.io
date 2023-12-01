@@ -58,7 +58,8 @@ jobs:
         run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           set NODE_OPTIONS=--openssl-legacy-provider
-          yarn build
+          npx browserslist@latest --update-db
+          NOE2E=1 react-scripts build --openssl-legacy-provider
         working-directory: ./
 
   # Deployment job
