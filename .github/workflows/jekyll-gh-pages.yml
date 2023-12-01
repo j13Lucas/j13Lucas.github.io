@@ -64,7 +64,7 @@ jobs:
           git config --global user.email "jerry13lucas@gmail.com"
           yarn run deploy
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # Deployment job
   deploy:
