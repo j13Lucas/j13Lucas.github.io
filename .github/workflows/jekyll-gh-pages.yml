@@ -60,7 +60,14 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git remote set-url origin git@github.com:j13Lucas/j13Lucas.github.io.git
+          mkdir ~/.ssh
+          echo "$SSH_KEY" >> ~/.ssh/github-action
+          chmod 400 ~/.ssh/github-action
+          echo -e "Host j13lucas\n\tUser j13lucas\n\tHostname 143.198.32.125\n\tIdentityFile ~/.ssh/github-action\n\tStrictHostKeyChecking No" >> ~/.ssh/config
+          rsync -e ssh public j13lucas:~/static
+          rsync -e ssh built/app.js j13lucas:~/static/js/app.js
+          rsync -e ssh built/server.js j13lucas:~/api/server.js
+          ssh j13lucas "pm2 reload all"
           yarn deploy
         env:
           GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
