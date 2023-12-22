@@ -9,7 +9,7 @@ const about = {
   name: 'Jerry Lucas',
   role: 'Computer Vision Engineer',
   description:
-  'Hello! I am Jerry, a passionate Computer Vision enthusiast. With a solid foundation in computer science and a keen interest in the realms of machine learning and AI, I am currently deepening my knowledge and skills in the specialized field of Computer Vision.',
+  'Hello! I am Jerry, a passionate Computer Vision enthusiast. With a solid foundation in computer science and a keen interest in the realms of machine learning and AI, I am currently deepening my knowledge and skills in the specialized field of Computer Vision. Feel free to contact me.',
   resume: 'https://example.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/j13lucas/',
